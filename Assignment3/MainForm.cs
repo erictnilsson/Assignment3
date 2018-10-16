@@ -80,7 +80,7 @@ namespace Assignment3
                 return false;
             }
             // check if numerical doubles *DOES NOT WORK*
-            else if (!(double.TryParse(textBoxCurrOdoRead.Text, out double val) || double.TryParse(textBoxPrevOdoRead.Text, out val) || double.TryParse(textBoxFuelInput.Text, out val) || double.TryParse(textBoxLiterPriceInput.Text, out val)))
+            else if ((!double.TryParse(textBoxCurrOdoRead.Text, out double val) || !double.TryParse(textBoxPrevOdoRead.Text, out val) || !double.TryParse(textBoxFuelInput.Text, out val) || !double.TryParse(textBoxLiterPriceInput.Text, out val)))
             {
                 errorMsg = "Make sure to only enter valid numerals.";
                 return false;
@@ -121,15 +121,8 @@ namespace Assignment3
 
         private bool ValidateBmiInput()
         {
-            // check if null
-            if (textBoxBmiHeight == null || textBoxBmiWeight == null)
-            {
-                errorMsg = "Make sure to fill out all fields.";
-                return false;
-
-            }
-            // check if numerical floats *DOES NOT WORK*
-            else if (!(float.TryParse(textBoxBmiHeight.Text, out float val) && float.TryParse(textBoxBmiWeight.Text, out val)))
+            // check if numerical floats
+            if ((!float.TryParse(textBoxBmiHeight.Text, out float val) || !float.TryParse(textBoxBmiWeight.Text, out val)))
             {
                 errorMsg = "Make sure to only enter valid numerals";
                 return false;
@@ -139,8 +132,12 @@ namespace Assignment3
 
         private bool ReadInputBmi()
         {
+            if (!SetName(textBoxBmiName.Text))
+                MessageBox.Show(errorMsg); 
+
             if (ValidateBmiInput())
             {
+
                 var height = float.Parse(textBoxBmiHeight.Text);
                 var weight = float.Parse(textBoxBmiWeight.Text);
                 var metric = false;
@@ -160,7 +157,7 @@ namespace Assignment3
 
         private void UpdateGUIBmi()
         {
-
+            groupBoxResultBMI.Text = "Result for " + name + ":"; 
         }
 
         private void UpdateGUIFuel()
@@ -176,6 +173,23 @@ namespace Assignment3
         {
             if (!ReadInputBmi())
                 MessageBox.Show(errorMsg); 
+            else
+            {
+                UpdateGUIBmi(); 
+            }
+        }
+
+        private bool SetName(string name)
+        {
+            if (name == null || name.Length < 1)
+            {
+                errorMsg = "Please enter a valid name.";
+                return false; 
+            } else
+            {
+                this.name = name;
+                return true; 
+            }
 
         }
 

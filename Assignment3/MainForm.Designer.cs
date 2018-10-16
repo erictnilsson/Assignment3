@@ -52,7 +52,7 @@
             this.groupBoxBMI = new System.Windows.Forms.GroupBox();
             this.groupBoxResultBMI = new System.Windows.Forms.GroupBox();
             this.labelBmiName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxBmiName = new System.Windows.Forms.TextBox();
             this.labelBmiHeight = new System.Windows.Forms.Label();
             this.textBoxBmiHeight = new System.Windows.Forms.TextBox();
             this.labelBmiWeight = new System.Windows.Forms.Label();
@@ -297,7 +297,7 @@
             this.groupBoxBMI.Controls.Add(this.labelBmiWeight);
             this.groupBoxBMI.Controls.Add(this.textBoxBmiHeight);
             this.groupBoxBMI.Controls.Add(this.labelBmiHeight);
-            this.groupBoxBMI.Controls.Add(this.textBox1);
+            this.groupBoxBMI.Controls.Add(this.textBoxBmiName);
             this.groupBoxBMI.Controls.Add(this.labelBmiName);
             this.groupBoxBMI.Location = new System.Drawing.Point(364, 6);
             this.groupBoxBMI.Name = "groupBoxBMI";
@@ -325,13 +325,13 @@
             this.labelBmiName.TabIndex = 1;
             this.labelBmiName.Text = "Your Name: ";
             // 
-            // textBox1
+            // textBoxBmiName
             // 
-            this.textBox1.Location = new System.Drawing.Point(134, 14);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 20);
-            this.textBox1.TabIndex = 9;
+            this.textBoxBmiName.Location = new System.Drawing.Point(134, 14);
+            this.textBoxBmiName.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxBmiName.Name = "textBoxBmiName";
+            this.textBoxBmiName.Size = new System.Drawing.Size(213, 20);
+            this.textBoxBmiName.TabIndex = 9;
             // 
             // labelBmiHeight
             // 
@@ -339,9 +339,9 @@
             this.labelBmiHeight.Location = new System.Drawing.Point(5, 52);
             this.labelBmiHeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelBmiHeight.Name = "labelBmiHeight";
-            this.labelBmiHeight.Size = new System.Drawing.Size(69, 13);
+            this.labelBmiHeight.Size = new System.Drawing.Size(120, 13);
             this.labelBmiHeight.TabIndex = 10;
-            this.labelBmiHeight.Text = "Your Height: ";
+            this.labelBmiHeight.Text = "Your Height (in meters): ";
             // 
             // textBoxBmiHeight
             // 
@@ -357,9 +357,9 @@
             this.labelBmiWeight.Location = new System.Drawing.Point(5, 83);
             this.labelBmiWeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelBmiWeight.Name = "labelBmiWeight";
-            this.labelBmiWeight.Size = new System.Drawing.Size(72, 13);
+            this.labelBmiWeight.Size = new System.Drawing.Size(104, 13);
             this.labelBmiWeight.TabIndex = 11;
-            this.labelBmiWeight.Text = "Your Weight: ";
+            this.labelBmiWeight.Text = "Your Weight (in kg): ";
             // 
             // textBoxBmiWeight
             // 
@@ -383,6 +383,7 @@
             // radioButtonBmiMetric
             // 
             this.radioButtonBmiMetric.AutoSize = true;
+            this.radioButtonBmiMetric.Checked = true;
             this.radioButtonBmiMetric.Location = new System.Drawing.Point(284, 48);
             this.radioButtonBmiMetric.Name = "radioButtonBmiMetric";
             this.radioButtonBmiMetric.Size = new System.Drawing.Size(54, 17);
@@ -399,7 +400,6 @@
             this.radioButtonBmiImperial.Name = "radioButtonBmiImperial";
             this.radioButtonBmiImperial.Size = new System.Drawing.Size(61, 17);
             this.radioButtonBmiImperial.TabIndex = 14;
-            this.radioButtonBmiImperial.TabStop = true;
             this.radioButtonBmiImperial.Text = "Imperial";
             this.radioButtonBmiImperial.UseVisualStyleBackColor = true;
             this.radioButtonBmiImperial.CheckedChanged += new System.EventHandler(this.radioButtonBmiUs_CheckedChanged);
@@ -459,7 +459,7 @@
         private System.Windows.Forms.Label labelBmiWeight;
         private System.Windows.Forms.TextBox textBoxBmiHeight;
         private System.Windows.Forms.Label labelBmiHeight;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxBmiName;
         private System.Windows.Forms.Label labelBmiName;
     }
 }
