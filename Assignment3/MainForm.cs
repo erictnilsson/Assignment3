@@ -148,7 +148,7 @@ namespace Assignment3
                 else if (radioButtonBmiImperial.Checked)
                     metric = false;
 
-                var result = bmiCalculator.CalcBMI(metric, height, weight);
+                bmiCalculator = new BMICalculator(metric, height, weight); 
                 return true;
             }
             return false; 
@@ -157,7 +157,10 @@ namespace Assignment3
 
         private void UpdateGUIBmi()
         {
-            groupBoxResultBMI.Text = "Result for " + name + ":"; 
+            groupBoxResultBMI.Text = "Result for " + name + ":";
+            var bmi = bmiCalculator.CalcBMI(); 
+            textBoxBmiResult.Text = bmi.ToString("0.00");
+            textBoxBmiCat.Text = bmiCalculator.CalcCategory(bmi).ToString(); 
         }
 
         private void UpdateGUIFuel()
@@ -195,7 +198,7 @@ namespace Assignment3
 
         private void radioButtonBmiMetric_CheckedChanged(object sender, EventArgs e)
         {
-            labelBmiHeight.Text = "Your Height (in meters):";
+            labelBmiHeight.Text = "Your Height (in cm):";
             labelBmiWeight.Text = "Your Weight (in kg):";
         }
 
@@ -203,6 +206,11 @@ namespace Assignment3
         {
             labelBmiHeight.Text = "Your Height (in inches):";
             labelBmiWeight.Text = "Your Weight (in lbs):";
+        }
+
+        private void labelBmiNormal_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

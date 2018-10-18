@@ -2,7 +2,6 @@ C:\Users\Eric Nilsson\source\repos\Assignment3\Assignment3\bin\Debug\Assignment3
 C:\Users\Eric Nilsson\source\repos\Assignment3\Assignment3\bin\Debug\Assignment3.exe
 C:\Users\Eric Nilsson\source\repos\Assignment3\Assignment3\bin\Debug\Assignment3.pdb
 C:\Users\Eric Nilsson\source\repos\Assignment3\Assignment3\obj\Debug\Assignment3.csprojResolveAssemblyReference.cache
-C:\Users\Eric Nilsson\source\repos\Assignment3\Assignment3\obj\Debug\Assignment3.Form1.resources
 C:\Users\Eric Nilsson\source\repos\Assignment3\Assignment3\obj\Debug\Assignment3.Properties.Resources.resources
 C:\Users\Eric Nilsson\source\repos\Assignment3\Assignment3\obj\Debug\Assignment3.csproj.GenerateResource.Cache
 C:\Users\Eric Nilsson\source\repos\Assignment3\Assignment3\obj\Debug\Assignment3.csproj.CoreCompileInputs.cache
@@ -18,3 +17,4 @@ C:\Users\Eric Nilsson\Documents\GitHub\Assignment3\Assignment3\obj\Debug\Assignm
 C:\Users\Eric Nilsson\Documents\GitHub\Assignment3\Assignment3\obj\Debug\Assignment3.exe
 C:\Users\Eric Nilsson\Documents\GitHub\Assignment3\Assignment3\obj\Debug\Assignment3.pdb
 C:\Users\Eric Nilsson\Documents\GitHub\Assignment3\Assignment3\obj\Debug\Assignment3.MainForm.resources
+C:\Users\Eric Nilsson\source\repos\Assignment3\Assignment3\obj\Debug\Assignment3.MainForm.resources
